@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>protalv2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css?h=b077f3d66f4dd45a76529f02462151f3">
+    <link rel="stylesheet" href="/assets/css/styles.min.css?h=9b8d2b00ca0ab5b6e541460124114733">
+</head>
+
+<body style="width: 100%;height: 100%;">
+    <div id="forcopy" style="width: 100%;height: 100%;">
+        <div><button class="btn btn-primary" type="button" style="margin-left: 10px;margin-top: 10px;font-size: 14px;">保存</button>
+            <!-- Start: notice_custom --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="保存成功后，当前tab页自动关掉，并回到转案定校页面。&#10;然后该条申请记录自动刷新为草稿状态&#10"></i>
+            <!-- End: notice_custom --><button class="btn btn-primary" type="button" style="margin-left: 10px;margin-top: 10px;font-size: 14px;">提交</button>
+            <!-- Start: notice_custom --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="提交成功后，当前tab页自动关掉，并回到转案定校页面。&#10;然后该条申请记录自动刷新为待审核状态&#10;然后业务顾问在其看板的在办中可以看到这个申请（见菜单《业务顾问看板》）  &#10;"></i>
+            <!-- End: notice_custom -->
+            <!-- Start: notice_icon --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);float: right;margin-right: 20px;" title="关闭/删除后，关闭本tab页，并回到转案定校页面"></i>
+            <!-- End: notice_icon --><button class="btn btn-primary" type="button" style="margin-left: 10px;margin-top: 10px;font-size: 14px;float: right;margin-right: 10px;">删除</button><button class="btn btn-primary" type="button" style="margin-left: 10px;margin-top: 10px;font-size: 14px;float: right;margin-right: 10px;">关闭</button></div>
+        <div>
+            <div style="width: auto;height: auto;display: inline;white-space:nowrap;"></div>
+            <div id="daili" style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: auto;height: auto;margin-top: 20px;margin-left: 20px;">所属代理</label>
+                <!-- Start: 可搜索下拉框 --><select class="auto_bring" style="margin-left: 10px;width: auto;"><option value=""></option><option value="12">可搜索下拉框</option><option value="13">动态获取</option></select>
+                <!-- End: 可搜索下拉框 -->
+                <!-- Start: notice_custom --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="当代理录入时，此字段自动带出且只读&#10;当业务顾问录入时，此字段必填 "></i>
+                <!-- End: notice_custom -->
+            </div>
+            <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: auto;height: auto;margin-top: 20px;margin-left: 20px;">学生</label>
+                <!-- Start: 可搜索下拉框 --><select class="auto_bring" style="margin-left: 10px;width: auto;"><option value=""></option><option value="12">可搜索下拉框</option><option value="13">动态获取</option><option value="">单选</option><option value="">显示信息如下</option><option value="">学生姓名</option><option value="">学生身份证号</option><option value="">学生护照号</option><option value="">目标区域</option></select>
+                <!-- End: 可搜索下拉框 -->
+            </div>
+            <!-- Start: must --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+            <!-- End: must -->
+            <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">预计出国日期</label><input type="date" style="margin-left: 10px;">
+                <!-- Start: must --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                <!-- End: must -->
+            </div>
+            <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">目标区域</label><select><option value=""></option><option value="12">英爱</option><option value="13">澳新</option><option value="14">加拿大</option><option value="">动态获取</option></select>
+                <!-- Start: must --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                <!-- End: must -->
+            </div>
+            <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">目标国家</label>
+                <!-- Start: 可搜索下拉框 --><select style="margin-left: 10px;"><option value=""></option><option value="12">可搜索下拉框</option><option value="13">动态获取</option></select>
+                <!-- End: 可搜索下拉框 -->
+                <!-- Start: must --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                <!-- End: must -->
+                <!-- Start: notice_icon --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击弹出国家选择框"></i>
+                <!-- End: notice_icon -->
+            </div>
+            <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: auto;height: auto;margin-top: 20px;margin-left: 20px;">申请层次</label><select style="margin-left: 10px;"><option value=""></option><option value="12">本科</option><option value="13">硕士</option><option value="">硕士（非套磁）</option><option value="">....下面还有很多，动态获取</option></select>
+                <!-- Start: must --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                <!-- End: must -->
+            </div>
+            <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">是否有拒签史</label><select style="margin-left: 10px;"><option value="14"></option><option value="12">无</option><option value="13">有</option></select>
+                <!-- Start: must --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                <!-- End: must -->
+            </div>
+            <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">合同签订日期</label><input type="date" style="margin-left: 10px;">
+                <!-- Start: must --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                <!-- End: must -->
+            </div>
+            <div class="d-xl-flex align-items-xl-start" style="width: auto;height: auto;display: inline;white-space: nowrap;margin-top: 20px;"><label style="width: auto;height: auto;margin-top: 20px;margin-left: 20px;">说明</label><textarea style="width: 500px;margin-left: 20px;"></textarea></div>
+            <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">附件上传</label><input type="file">
+                <!-- Start: must --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                <!-- End: must -->
+            </div>
+        </div>
+        <hr><button class="btn btn-primary" type="button" style="font-size: 14px;margin-left: 20px;">增行</button><button class="btn btn-primary" type="button" style="font-size: 14px;margin-left: 20px;">删行</button>
+        <!-- Start: notice_custom --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="默认已有一行  &#10;若要新增点击【增行】按钮&#10;若要删除，勾选行前checkbox，然后点击【删行】按钮 "></i>
+        <!-- End: notice_custom -->
+        <div style="margin-top: 10px;width: 100%;">
+            <div class="table-responsive" style="width: 100%;">
+                <table class="table">
+                    <thead style="width: 100%;">
+                        <tr style="width: 100%;">
+                            <th style="background: #dee2e6;width: auto;"></th>
+                            <th style="background: #dee2e6;width: auto;"></th>
+                            <th style="background: #dee2e6;width: auto;">学校名称</th>
+                            <th style="background: #dee2e6;width: auto;">专业名称<i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="1、此字段与学校有联动关系，仅带出所选学校下的专业&#10;2、当【学校】字段的值改变后，此字段自动清空&#10;3、当只有一个专业时，自动带出默认专业"></i></th>
+                            <th style="background: #dee2e6;width: auto;">申请层次<i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="这个字段的值在【专业名称】选择后，自动带出，无需用户填写"></i></th>
+                            <th style="background: #dee2e6;width: auto;">专业大类<i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="这个字段的值在【专业名称】选择后，自动带出，无需用户填写"></i></th>
+                            <th style="background: #dee2e6;width: auto;">申请入读时间</th>
+                            <th style="background: #dee2e6;width: auto;">申请年级</th>
+                            <th style="background: #dee2e6;width: auto;">说明</th>
+                            <th style="background: #dee2e6;width: auto;">附件</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width: auto;"><input type="checkbox"></td>
+                            <td style="width: auto;">1</td>
+                            <td style="width: auto;">
+                                <div>
+                                    <!-- Start: 可搜索下拉框 --><select style="margin-left: 10px;"><option value=""></option><option value="12">可搜索下拉框</option><option value="13">动态获取</option></select>
+                                    <!-- End: 可搜索下拉框 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i></div>
+                            </td>
+                            <td style="width: auto;">
+                                <div>
+                                    <!-- Start: 可搜索下拉框 --><select style="margin-left: 10px;"><option value=""></option><option value="12">可搜索下拉框</option><option value="13">动态获取</option></select>
+                                    <!-- End: 可搜索下拉框 -->
+                                    <!-- Start: must --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: must -->
+                                </div>
+                            </td>
+                            <td style="width: auto;">根据专业自动给带出
+                                <p></p>
+                            </td>
+                            <td style="width: auto;">根据专业自动带出
+                                <p></p>
+                            </td>
+                            <td style="width: auto;"><input type="date"><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i></td>
+                            <td style="width: auto;"><select><option value="" selected=""></option><option value="12">YEAR1</option><option value="13">YEAR2</option><option value="14">YEAR3</option><option value="">动态获取</option></select><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i></td>
+                            <td
+                                style="width: auto;"><textarea style="width: 150px;"></textarea></td>
+                                <td style="width: auto;"><input type="file" style="width: 150px;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

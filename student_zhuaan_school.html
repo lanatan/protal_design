@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>protalv2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css?h=b077f3d66f4dd45a76529f02462151f3">
+    <link rel="stylesheet" href="/assets/css/styles.min.css?h=9b8d2b00ca0ab5b6e541460124114733">
+</head>
+
+<body style="width: 100%;height: 100%;">
+    <div style="width: 100%;height: 100%;">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1">转案定校</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" id="tab3" href="#tab-3">转案申请</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" id="tab5" href="#tab-5">张三的转案申请</a></li>
+        </ul>
+        <div class="tab-content" style="width: 100%;height: 92%;">
+            <div class="tab-pane active" role="tabpanel" id="tab-1">
+                <div style="margin-top: 30px;">
+                    <div>
+                        <div style="display: inline;white-space:nowrap"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">所属代理</label><input type="text" style="margin-left: 10px;width: 120px;"></div>
+                        <div style="display: inline;white-space:nowrap"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">学生</label><input type="text" style="margin-left: 10px;width: 120px;"></div>
+                        <div style="display: inline;white-space:nowrap;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">目标区域</label><select style="margin-left: 10px;"><option value=""></option><option value="12">英爱</option><option value="13">澳新</option><option value="14">加拿大</option></select></div>
+                        <div
+                            style="display: inline;white-space:nowrap;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">合同签订日期</label><input type="date" style="margin-left: 10px;"><small diaplay="inline-block" style="margin-left: 5px;margin-right: 5px;">—</small>
+                            <input
+                                type="date"></div>
+                    <!-- Start: 输入表单-选择框 -->
+                    <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: auto;height: auto;margin-top: 20px;margin-left: 20px;">状态</label>
+                        <!-- Start: 选择框 --><select style="margin-left: 10px;"><option value=""></option><option value="">已转案</option><option value="13">草稿</option><option value="">审核中</option><option value="">退回</option></select>
+                        <!-- End: 选择框 -->
+                        <!-- Start: notice_icon --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="明细状态"></i>
+                        <!-- End: notice_icon -->
+                    </div>
+                    <!-- End: 输入表单-选择框 --><button class="btn btn-primary" type="button" style="margin-left: 20px;margin-bottom: 10px;font-size: 14px;height: 30px;padding-top: 4px;margin-right: 20px;">搜索</button>
+                    <hr>
+                </div>
+                <div style="margin-top: 20px;"><button class="btn btn-primary" id="new" type="button" style="height: 30px;padding-top: 3px;margin-left: 20px;">新建</button>
+                    <!-- Start: notice --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击修改后，跳到转案申请页面"></i>
+                    <!-- End: notice --><button class="btn btn-primary" type="button" style="height: 30px;padding-top: 3px;margin-left: 20px;">删除</button>
+                    <!-- Start: notice_icon --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="勾选checkbox后可以删除【当前状态（在table中有此字段）】为“草稿”的记录。若勾选的记录中含有【当前状态】为”草稿“的记录，则提示”只可删除草稿状态中的记录，请重新勾选！“"></i>
+                    <!-- End: notice_icon -->
+                </div>
+            </div>
+            <div class="table-responsive" style="margin-top: 20px;margin-left: 0px;margin-right: 0px;border: 0.2px solid rgb(229,232,235);font-size: 15px;width: 100%;">
+                <table class="table">
+                    <thead style="width: 100%;">
+                        <tr style="width: 100%;">
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">&nbsp; &nbsp;&nbsp;</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">&nbsp; &nbsp;所属代理&nbsp;</th>
+                            <th class="text-center" style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;text-align: left;">学生</th>
+                            <th class="text-center" style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;" colspan="3">预计出国日期</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">目标区域</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">目标国家</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;"><br>申请层次<br></th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">是否有拒签史</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">合同签订日期</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">说明</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">当前状态</th>
+                            <th style="width: 120px;padding-right: 5px;padding-left: 5px;background: #eeeeee;"></th>
+                        </tr>
+                    </thead>
+                    <tbody style="width: 100%;">
+                        <tr class="copy" style="width: 100%;">
+                            <td style="font-size: 15px;width: auto;"><input type="checkbox"><br></td>
+                            <td style="font-size: 15px;width: auto;">北京xxx</td>
+                            <td class="text-center" style="font-size: 15px;width: auto;text-align: center;">张三</td>
+                            <td class="text-center" style="font-size: 15px;width: auto;" colspan="3">2022-07-01</td>
+                            <td style="font-size: 15px;width: auto;">英爱</td>
+                            <td style="font-size: 15px;width: auto;">英国</td>
+                            <td style="font-size: 15px;width: auto;">本科</td>
+                            <td style="font-size: 15px;width: auto;">无</td>
+                            <td style="font-size: 15px;width: auto;">2021-10-01</td>
+                            <td style="font-size: 15px;width: auto;">这是一个说明</td>
+                            <td style="font-size: 15px;width: auto;">草稿<i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="新建转案申请，但是并没有提交时，状态为“草稿”，并显示在主数据行中"></i></td>
+                            <td style="font-size: 15px;width: auto;"><button class="btn btn-primary" id="edit_caogao" type="button" style="height: 30px;padding-top: 2px;font-size: 14px;display:inline-block">编辑</button><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="当整单的【状态（见左侧字段“状态”）】为草稿时，出现【编辑】按钮"></i></td>
+                        </tr>
+                        <tr class="copy" style="width: 100%;">
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>学校</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>专业</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>申请层次</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>专业大类</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>申请入读时间</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>申请年级</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>说明</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>附件</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"></td>
+                        </tr>
+                        <tr class="copy" style="width: 100%;">
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td class="text-center" style="font-size: 15px;width: auto;">伦敦大学</td>
+                            <td class="text-center" style="font-size: 15px;width: auto;">金融</td>
+                            <td style="font-size: 15px;width: auto;">本科</td>
+                            <td style="font-size: 15px;width: auto;">金融</td>
+                            <td style="font-size: 15px;width: auto;">2022-01-01</td>
+                            <td style="font-size: 15px;width: auto;">大一</td>
+                            <td style="font-size: 15px;width: auto;">这是一个说明</td>
+                            <td style="font-size: 15px;width: auto;"><a href="#">附件1</a></td>
+                            <td style="font-size: 15px;width: auto;"></td>
+                            <td style="font-size: 15px;width: auto;"></td>
+                        </tr>
+                        <tr class="copy" style="width: 100%;">
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td class="text-center" style="font-size: 15px;width: auto;">剑桥大学</td>
+                            <td class="text-center" style="font-size: 15px;width: auto;">金融</td>
+                            <td style="font-size: 15px;width: auto;">本科</td>
+                            <td style="font-size: 15px;width: auto;">金融</td>
+                            <td style="font-size: 15px;width: auto;">2022-01-01</td>
+                            <td style="font-size: 15px;width: auto;">大一</td>
+                            <td style="font-size: 15px;width: auto;">这是一个说明</td>
+                            <td style="font-size: 15px;width: auto;"><a href="#">附件2</a><a href="#" style="margin-left: 10px;">附件3</a></td>
+                            <td style="font-size: 15px;width: auto;"></td>
+                            <td style="font-size: 15px;width: auto;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive" style="margin-left: 0px;margin-right: 0px;border: 0.2px solid rgb(229,232,235);font-size: 15px;width: 100%;">
+                <table class="table">
+                    <thead style="width: 100%;">
+                        <tr style="width: 100%;">
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">&nbsp; &nbsp;&nbsp;</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">&nbsp; &nbsp; 所属代理</th>
+                            <th class="text-center" style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;text-align: left;">学生</th>
+                            <th class="text-center" style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;" colspan="3">预计出国日期</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">目标区域</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">目标国家</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;"><br>申请层次<br></th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">是否有拒签史</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">合同签订日期</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">说明</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">当前状态</th>
+                            <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;"></th>
+                        </tr>
+                    </thead>
+                    <tbody style="width: 100%;">
+                        <tr class="copy" style="width: 100%;">
+                            <td style="font-size: 15px;width: auto;"><input type="checkbox"><br></td>
+                            <td style="font-size: 15px;width: auto;">上海xxx</td>
+                            <td class="text-center" style="font-size: 15px;width: auto;text-align: center;">李四</td>
+                            <td class="text-center" style="font-size: 15px;width: auto;" colspan="3">2022-07-01</td>
+                            <td style="font-size: 15px;width: auto;">英爱</td>
+                            <td style="font-size: 15px;width: auto;">英国</td>
+                            <td style="font-size: 15px;width: auto;">本科</td>
+                            <td style="font-size: 15px;width: auto;">无</td>
+                            <td style="font-size: 15px;width: auto;">2021-10-01</td>
+                            <td style="font-size: 15px;width: auto;">这是一个说明</td>
+                            <td style="font-size: 15px;width: auto;"></td>
+                            <td style="font-size: 15px;width: auto;"></td>
+                        </tr>
+                        <tr class="copy" style="width: 100%;">
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>学校</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>专业</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>申请层次</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>专业大类</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>申请入读时间</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>申请年级</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>说明</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"><strong>附件</strong></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"></td>
+                            <td style="font-size: 15px;width: auto;background: #f5fafb;"></td>
+                        </tr>
+                        <tr class="copy" style="width: 100%;">
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td class="text-center" style="font-size: 15px;width: auto;">伦敦理工大学</td>
+                            <td class="text-center" style="font-size: 15px;width: auto;">计算机</td>
+                            <td style="font-size: 15px;width: auto;">本科</td>
+                            <td style="font-size: 15px;width: auto;">计算机</td>
+                            <td style="font-size: 15px;width: auto;">2022-01-01</td>
+                            <td style="font-size: 15px;width: auto;">大一</td>
+                            <td style="font-size: 15px;width: auto;">这是一个说明</td>
+                            <td style="font-size: 15px;width: auto;"><a href="#">附件1</a></td>
+                            <td style="font-size: 15px;width: auto;">
+                                <p id="p_quit" style="width: 50px;display: inline;border-style: none;border-color: rgb(249,31,17);">待审核</p><i class="fas fa-comment quit" style="margin-left: 10px;color: rgb(248,66,54);" title="转案申请提交后，各明细行的数据状态有 待审核、已转案、退回 这几种，分别显示在各明细行中"></i></td>
+                            <td style="font-size: 15px;width: auto;"><button class="btn btn-primary quit" id="quit" type="button" style="font-size: 14px;">放弃</button><button class="btn btn-primary" id="edit_quit" type="button" style="font-size: 14px;border: 3px none rgb(249,21,7) ;display:none">编辑</button><i class="fas fa-comment quit" style="margin-left: 10px;color: rgb(248,66,54);" title="当数据状态为 待审核、已转案、退回 这几种时，出现放弃按钮&#10; 点击放弃后，状态变为“草稿”&#10; 注意状态变为草稿后，出现【编辑】按钮，【放弃】按钮消失"></i></td>
+                        </tr>
+                        <tr class="copy" style="width: 100%;">
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td class="text-center" style="font-size: 15px;width: auto;">剑桥大学</td>
+                            <td class="text-center" style="font-size: 15px;width: auto;">计算机</td>
+                            <td style="font-size: 15px;width: auto;">本科</td>
+                            <td style="font-size: 15px;width: auto;">计算机</td>
+                            <td style="font-size: 15px;width: auto;">2022-01-01</td>
+                            <td style="font-size: 15px;width: auto;">大一</td>
+                            <td style="font-size: 15px;width: auto;">这是一个说明</td>
+                            <td style="font-size: 15px;width: auto;"><a href="#">附件2</a><a href="#" style="margin-left: 10px;">附件3</a></td>
+                            <td style="font-size: 15px;width: auto;">已转案</td>
+                            <td style="font-size: 15px;width: auto;"><button class="btn btn-primary" type="button" style="font-size: 14px;">放弃</button></td>
+                        </tr>
+                        <tr class="copy" style="width: 100%;">
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td style="font-size: 15px;width: auto;"><br></td>
+                            <td class="text-center" style="font-size: 15px;width: auto;">英国大学</td>
+                            <td class="text-center" style="font-size: 15px;width: auto;">计算机</td>
+                            <td style="font-size: 15px;width: auto;">本科</td>
+                            <td style="font-size: 15px;width: auto;">计算机</td>
+                            <td style="font-size: 15px;width: auto;">2022-01-01</td>
+                            <td style="font-size: 15px;width: auto;">大一</td>
+                            <td style="font-size: 15px;width: auto;">这是一个说明</td>
+                            <td style="font-size: 15px;width: auto;"><a href="#">附件2</a><a href="#" style="margin-left: 10px;">附件3</a></td>
+                            <td style="font-size: 15px;width: auto;">退回</td>
+                            <td style="font-size: 15px;width: auto;"><button class="btn btn-primary" type="button" style="font-size: 14px;">放弃</button><button class="btn btn-primary" id="edit_tuihui" type="button" style="font-size: 14px;margin-left: 10px;">编辑</button><i class="fas fa-comment"
+                                    style="margin-left: 10px;color: rgb(248,66,54);" title="状态为“退回”时，出现编辑按钮，进入编辑页面，编辑页面没有删除按钮"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav style="margin-top: 10px;width: 100%;padding-left: 80%;">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="tab-pane" role="tabpanel" id="tab-3" style="width: 100%;height: 100%;"></div>
+        <div class="tab-pane" role="tabpanel" id="tab-5" style="width: 100%;height: 100%;"></div>
+    </div>
+    </div>
+    <!-- Start: modal -->
+    <div class="modal fade" role="dialog" tabindex="-1" id="myModal_student" style="width: 100%;height: 100%;">
+        <div class="modal-dialog" role="document" style="width:1000px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">学生</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body" id="myModal_body" style="height: 400px;position:relative;">
+                    <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: 50px;height: auto;margin-top: 20px;margin-left: 20px;">姓名</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;"><button class="btn btn-primary" type="button" style="margin-left: 20px;margin-bottom: 10px;font-size: 14px;">搜索</button></div>
+                    <div
+                        class="table-responsive" style="width: 100%;margin-top: 10px;">
+                        <table class="table">
+                            <thead style="width: 100%;">
+                                <tr style="width: 100%;">
+                                    <th style="width: auto;">姓名</th>
+                                    <th style="width: auto;">身份证号</th>
+                                    <th style="width: auto;">护照号</th>
+                                    <th style="width: auto;">手机</th>
+                                </tr>
+                            </thead>
+                            <tbody style="width: 100%;">
+                                <tr style="width: 100%;">
+                                    <td style="width: auto;">张三</td>
+                                    <td style="width: auto;">425345</td>
+                                    <td style="width: auto;">324132</td>
+                                    <td style="width: auto;">12345678</td>
+                                </tr>
+                                <tr style="width: 100%;">
+                                    <td style="width: auto;">李四</td>
+                                    <td style="width: auto;">676576</td>
+                                    <td style="width: auto;">78676</td>
+                                    <td style="width: auto;">12345678</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+                <nav style="position: absolute;bottom: 0;margin-left: 40%;">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="modal-footer"><button class="btn btn-primary" type="button">保存</button><button class="btn btn-light" type="button" data-dismiss="modal">取消</button></div>
+        </div>
+    </div>
+    </div>
+    <!-- End: modal -->
+    <!-- Start: modal -->
+    <div class="modal fade" role="dialog" tabindex="-1" id="myModal_country" style="width: 100%;height: 100%;">
+        <div class="modal-dialog" role="document" style="width:1000px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">目标国家</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body" id="myModal_body-1" style="height: 400px;position:relative;">
+                    <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: 50px;height: auto;margin-top: 20px;margin-left: 20px;">国家</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;"><button class="btn btn-primary" type="button" style="margin-left: 20px;margin-bottom: 10px;font-size: 14px;">搜索</button></div>
+                    <div
+                        class="table-responsive" style="width: 100%;margin-top: 10px;">
+                        <table class="table">
+                            <thead style="width: 100%;">
+                                <tr style="width: 100%;">
+                                    <th style="width: auto;">国家</th>
+                                </tr>
+                            </thead>
+                            <tbody style="width: 100%;">
+                                <tr style="width: 100%;">
+                                    <td style="width: auto;">英国</td>
+                                </tr>
+                                <tr style="width: 100%;">
+                                    <td style="width: auto;">美国</td>
+                                </tr>
+                                <tr style="width: 100%;">
+                                    <td style="width: auto;">加拿大</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+                <nav style="position: absolute;bottom: 0;margin-left: 40%;">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="modal-footer"><button class="btn btn-primary" type="button">保存</button><button class="btn btn-light" type="button" data-dismiss="modal">取消</button></div>
+        </div>
+    </div>
+    </div>
+    <!-- End: modal -->
+    <!-- Start: modal -->
+    <div class="modal fade" role="dialog" tabindex="-1" id="myModal_school" style="width: 100%;height: 100%;">
+        <div class="modal-dialog" role="document" style="width:1000px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">学校名称</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body" id="myModal_body-2" style="height: 400px;position:relative;">
+                    <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: 50px;height: auto;margin-top: 20px;margin-left: 20px;">全称</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;"></div>
+                    <div style="width: auto;height: auto;display: inline;white-space:nowrap;"></div>
+                    <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><button class="btn btn-primary" type="button" style="margin-left: 20px;margin-bottom: 10px;font-size: 14px;">搜索</button></div>
+                    <div class="table-responsive" style="width: 100%;margin-top: 10px;">
+                        <table class="table">
+                            <thead style="width: 100%;">
+                                <tr style="width: 100%;">
+                                    <th style="width: auto;">全称</th>
+                                    <th style="width: auto;">院校类型</th>
+                                    <th style="width: auto;">是否合作院校</th>
+                                </tr>
+                            </thead>
+                            <tbody style="width: 100%;">
+                                <tr style="width: 100%;">
+                                    <td style="width: auto;">Belarusian State Academy of Music</td>
+                                    <td style="width: auto;">艺术类院校</td>
+                                    <td style="width: auto;"></td>
+                                </tr>
+                                <tr style="width: 100%;">
+                                    <td style="width: auto;"> Freies Gymnasium im Stift Neuzelle</td>
+                                    <td style="width: auto;">中学</td>
+                                    <td style="width: auto;">是</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav style="position: absolute;bottom: 0;margin-left: 40%;">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button">保存</button><button class="btn btn-light" type="button" data-dismiss="modal">取消</button></div>
+            </div>
+        </div>
+    </div>
+    <!-- End: modal -->
+    <!-- Start: modal -->
+    <div class="modal fade" role="dialog" tabindex="-1" id="myModal_spa" style="width: 100%;height: 100%;">
+        <div class="modal-dialog" role="document" style="width:1000px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">专业名称</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body" id="myModal_body-3" style="height: 400px;position:relative;">
+                    <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><label style="width: 50px;height: auto;margin-top: 20px;margin-left: 20px;">全称</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;"></div>
+                    <div style="width: auto;height: auto;display: inline;white-space:nowrap;"></div>
+                    <div style="width: auto;height: auto;display: inline;white-space:nowrap;"><button class="btn btn-primary" type="button" style="margin-left: 20px;margin-bottom: 10px;font-size: 14px;">搜索</button></div>
+                    <div class="table-responsive" style="width: 100%;margin-top: 10px;">
+                        <table class="table">
+                            <thead style="width: 100%;">
+                                <tr style="width: 100%;">
+                                    <th style="width: auto;">全称</th>
+                                    <th style="width: auto;">课程类型</th>
+                                    <th style="width: auto;">申请层次</th>
+                                </tr>
+                            </thead>
+                            <tbody style="width: 100%;">
+                                <tr style="width: 100%;">
+                                    <td style="width: auto;">BS in Computer Information Systems</td>
+                                    <td style="width: auto;">本科</td>
+                                    <td style="width: auto;">本科直申</td>
+                                </tr>
+                                <tr style="width: 100%;">
+                                    <td style="width: auto;"> BS in Accounting</td>
+                                    <td style="width: auto;">本科</td>
+                                    <td style="width: auto;">本科</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav style="position: absolute;bottom: 0;margin-left: 40%;">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button">保存</button><button class="btn btn-light" type="button" data-dismiss="modal">取消</button></div>
+            </div>
+        </div>
+    </div>
+    <!-- End: modal -->
+    <div id="pop" style="position: absolute;top: 20%;left: 40%;display: none;background: #dee2e6;border-style: none;border-color: rgb(222,226,230);width: 400px;height: auto;">
+        <div style="margin-left: 20px;margin-top: 10px;">
+            <h1 style="font-size: 20px;">选择文件</h1>
+            <div style="display: inline;white-space:nowrap;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">下载模板</label><a href="#" style="margin-left: 20px;font-size: 15px;">学生信息导入模板</a></div>
+            <div><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">上传文件</label><input type="file" style="margin-top: 20px;margin-bottom: 20px;margin-left: 20px;width: 200px;"></div>
+        </div>
+        <div style="margin-top: 10px;margin-bottom: 10px;"><button class="btn btn-primary" type="button" style="display: inline-block;margin-left: 30%;font-size: 14px;margin-bottom: 10px;">导入</button><button class="btn btn-primary" id="cancel" type="button" style="display: inline-block;margin-left: 20px;font-size: 14px;padding-top: 8px;margin-bottom: 10px;">取消</button></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/zhuaan_school.min.js?h=892a94a9ee8b60c00912f0c5ccdd0650"></script>
+</body>
+
+</html>

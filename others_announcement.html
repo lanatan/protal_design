@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>protalv2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css?h=b077f3d66f4dd45a76529f02462151f3">
+    <link rel="stylesheet" href="/assets/css/styles.min.css?h=9b8d2b00ca0ab5b6e541460124114733">
+</head>
+
+<body style="width: 100%;height: 100%;border-style: none;">
+    <div style="width: 100%;height: 100%;">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1">主页</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" id="list" href="#tab-2">新建公告</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" id="list2" href="#tab-3">2021年3月...</a></li>
+        </ul>
+        <div class="tab-content" style="width: 100%;height: 90%;">
+            <div class="tab-pane active" role="tabpanel" id="tab-1">
+                <div class="table-responsive" style="width: 30%;height: 27%;margin-left: 10px;margin-top: 20px;border-style: solid;border-color: rgb(222,226,230);">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>公告<i class="fas fa-comment" style="float: right;color: rgb(244,6,6);" title="点击后自动打开【新建公告（TAB页）】页签。PS：有发送公告权限的人才显示此按钮"></i><button class="btn btn-primary" id="create" type="button" style="float: right;font-size: 14px;background: rgb(0,178,255);border-color: rgb(0,178,255);">新建公告</button></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fa fa-square" style="color: rgb(191,237,155);"></i><a id="announcement" href="#tab-2" style="margin-left: 10px;">2021年3月 院校排行榜</a><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击后自动打开TAB页，TAB标题显示公告标题"></i>
+                                    <small
+                                        style="float:right">2021-04-11</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-square" style="color: rgb(191,237,155);"></i><a id="num-1" href="#tab-2" style="margin-left: 10px;">2021年4月 院校排行榜</a><small style="float:right">2021-04-11</small></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-2" style="width: 100%;height: 100%;">
+                <div style="margin-left: 30px;margin-top: 20px;"><button class="btn btn-primary" type="button">发布</button></div>
+                <div style="width: 100%;">
+                    <h1 style="font-size: 20px;margin-left: 30px;margin-top: 20px;">公告标题</h1><input type="text" style="margin-left: 30px;width: 90%;">
+                    <!-- Start: must --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                    <!-- End: must -->
+                </div>
+                <div style="width: 100%;height: 50%;">
+                    <h1 style="font-size: 20px;margin-left: 30px;margin-top: 10px;">公告内容</h1><textarea style="width: 90%;margin-top: 10px;margin-left: 30px;height: 100%;"></textarea>
+                    <!-- Start: must --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                    <!-- End: must -->
+                </div>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-3" style="width: 100%;height: 100%;">
+                <div style="width: 100%;height: auto;margin-right: 20px;margin-left: 20px;margin-top: 30px;">
+                    <h1 style="font-size: 30px;margin-left: 10px;">2021年3月&nbsp;院校排行榜</h1>
+                    <p style="margin-left: 10px;margin-top: 10px;font-size: 13px;color: rgb(222,226,230);">创建时间：2021-04-11&nbsp; 9：00&nbsp; &nbsp; &nbsp; 创建人：张三</p>
+                    <p style="margin-left: 10px;">排行榜如下：</p>
+                    <p style="margin-left: 10px;">。。。。。。。。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pop" style="position: absolute;top: 30%;left: 40%;display: none;background: #dee2e6;border-style: none;border-color: rgb(222,226,230);">
+        <div class="alert alert-success" role="alert" style="background: rgb(222,226,230);border-color: rgb(222,226,230);"><span>请填写退回意见</span></div><textarea style="width: 300px;height: 100px;margin-left: 10px;margin-right: 10px;"></textarea>
+        <!-- Start: br --><br>
+        <!-- End: br --><button class="btn btn-primary" type="button" style="display: inline-block;margin-left: 30%;font-size: 14px;margin-bottom: 10px;">确定</button><button class="btn btn-primary" id="cancel" type="button" style="display: inline-block;margin-left: 20px;font-size: 14px;padding-top: 8px;margin-bottom: 10px;">取消</button></div>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/js/announcement.min.js?h=8de9e8048caca268214e1fdf3da9aa44"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>protalv2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css?h=b077f3d66f4dd45a76529f02462151f3">
+    <link rel="stylesheet" href="/assets/css/styles.min.css?h=9b8d2b00ca0ab5b6e541460124114733">
+</head>
+
+<body style="width: 100%;height: 100%;border-style: none;">
+    <div style="width: 50%;height: auto;position: absolute;top: 5%;left: 33%;">
+        <!-- Start: br --><br>
+        <!-- End: br -->
+        <h1 id="head" style="font-size: 35px;display: inline-block;">提交信息</h1><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="代理登录时：&#10; &#10; 1、如果未提交审核信息，则显示页面1（点击右侧“未提交页面信息”可见）。&#10; 2、如果信息审核中，则显示页面2（点击右侧“审核中页面”可见）。&#10; &#10; 主要区别在：&#10; 1）标题变为“审核中”；&#10; 2）下列表单内容自动带出之前提交过的信息；&#10; 3）下方蓝色按钮文字显示“重新提交信息审核”。&#10;&#10;  3、信息审核完毕后，进入protal首页"></i><a id="link1" href="#" style="display: inline-block;padding-top: 1px;margin-left: 20px;font-size: 13px;color: rgb(255,0,15);">1、未提交信息页面</a><a id="link2" href="#" style="display: inline-block;margin-left: 20px;color: rgb(255,0,0);font-size: 13px;">2、审核中页面</a>
+        <div
+            style="width: auto;height: auto;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: 100px;height: auto;">代理公司全称<br></label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+            <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+            <!-- End: 必填 -->
+    </div>
+    <div style="width: auto;height: auto;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: 100px;height: auto;">负责人名称<br></label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+        <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+        <!-- End: 必填 -->
+    </div>
+    <div style="width: auto;height: auto;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: 100px;height: auto;">手机号<br></label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+        <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+        <!-- End: 必填 -->
+    </div>
+    <div style="width: auto;height: auto;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: 100px;height: auto;">电子邮箱<br></label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+        <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+        <!-- End: 必填 -->
+    </div>
+    <div style="width: auto;height: auto;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: 100px;height: auto;">公司法人<br></label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;"></div>
+    <div style="width: auto;height: auto;margin-top: 20PX;"><label style="display:inline-block;vertical-align:middle;margin-left: 20px;margin-top: 20px;font-size: 15px;width: 100px;height: auto;">详细说明<br></label><textarea style="margin-left: 10px;display: inline-block;vertical-align: middle;width: 300px;"></textarea></div>
+    <div
+        style="width: auto;height: auto;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: 100px;height: auto;">公司营业执照<br></label><input type="file" class="input" style="margin-left: 10px;width: auto;height: auto;"></div>
+        <div style="width: auto;height: auto;margin-top: 20px;margin-left: 20%;display:block"><button class="btn btn-primary" id="btn" type="button">提交信息审核</button>
+            <!-- Start: notice_icon --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击提交之后转到审核中页面，并且审核消息发送给BD顾问，出现在【BD顾问看板（菜单）】的在办事务中。"></i>
+            <!-- End: notice_icon -->
+        </div>
+        <div class="alert alert-success" role="alert" style="margin-top: 20px;width: 450px;height: auto;"><span style="font-size: 13px;"><strong>温馨提示：启德顾问审核上述信息后，才可正式使用protal系统</strong><br></span></div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/js/agentLogin.min.js?h=bf23d709898ee1837567da297fc57a76"></script>
+</body>
+
+</html>

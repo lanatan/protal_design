@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>protalv2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css?h=b077f3d66f4dd45a76529f02462151f3">
+    <link rel="stylesheet" href="/assets/css/styles.min.css?h=9b8d2b00ca0ab5b6e541460124114733">
+</head>
+
+<body>
+    <div style="width: 100%;">
+        <ul class="nav nav-tabs" role="tablist" style="width: 100%;">
+            <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1">学生信息</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" id="link2" href="#tab-2">转案申请</a></li>
+        </ul>
+        <div class="tab-content" style="width: 100%;">
+            <div class="tab-pane active" role="tabpanel" id="tab-1" style="width: 100%;">
+                <div style="margin-top: 30px;">
+                    <div>
+                        <div style="display: inline;white-space:nowrap"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">护照号</label><input type="text" style="margin-left: 10px;width: auto;"></div>
+                        <div style="display: inline;white-space:nowrap;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">身份证号</label><input type="text" style="margin-left: 10px;width: auto;"></div>
+                        <div style="display: inline;white-space:nowrap;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">姓名</label><input type="text" style="margin-left: 10px;width: auto;"></div><button class="btn btn-primary" type="button" style="margin-left: 20px;margin-bottom: 10px;font-size: 14px;height: 30px;padding-top: 4px;margin-right: 20px;">搜索</button>
+                        <hr>
+                    </div>
+                    <div style="margin-top: 20px;"><button class="btn btn-primary" id="create" type="button" style="height: 30px;padding-top: 3px;margin-left: 20px;">新建</button>
+                        <!-- Start: notice --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击修改后，弹出新建框"></i>
+                        <!-- End: notice --><button class="btn btn-primary" type="button" style="height: 30px;padding-top: 3px;margin-left: 20px;">删除</button>
+                        <!-- Start: notice_icon --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="勾选checkbox后删除学生记录"></i>
+                        <!-- End: notice_icon --><button class="btn btn-primary" id="import" type="button" style="height: 30px;margin-left: 30px;padding-top: 2px;">批量导入</button>
+                        <!-- Start: notice_icon --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击批量导入，出现导入弹框"></i>
+                        <!-- End: notice_icon -->
+                    </div>
+                </div>
+                <div class="table-responsive" style="margin-top: 10px;margin-left: 0px;margin-right: 0px;border: 0.2px solid rgb(229,232,235);font-size: 15px;width: 100%;">
+                    <table class="table">
+                        <thead style="width: 100%;">
+                            <tr style="width: 100%;">
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">&nbsp; &nbsp;&nbsp;</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">创建时间</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">所属代理</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">申请人姓名</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">拼音（姓）</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">拼音（名）</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;"><br>性别<br></th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">身份证号</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">护照号</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">出生日期</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">申请人手机</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">目前学历</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">毕业就读院校</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">所读专业</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">目前专业大类</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">平均分数值</th>
+                                <th style="width: auto;padding-right: 5px;padding-left: 5px;background: #eeeeee;">平均分类型</th>
+                                <th style="width: 120px;padding-right: 5px;padding-left: 5px;background: #eeeeee;"></th>
+                                <th style="width: 200px;padding-right: 5px;padding-left: 5px;background: #eeeeee;"></th>
+                            </tr>
+                        </thead>
+                        <tbody style="width: 100%;">
+                            <tr class="copy" style="width: 100%;">
+                                <td style="font-size: 15px;width: auto;"><input type="checkbox"><br></td>
+                                <td style="font-size: 15px;width: auto;">&nbsp;&nbsp;2021-10-11<br></td>
+                                <td style="font-size: 15px;width: auto;">北京xxxx<br></td>
+                                <td style="font-size: 15px;width: auto;">张三</td>
+                                <td style="font-size: 15px;width: auto;">zhang</td>
+                                <td style="font-size: 15px;width: auto;">san</td>
+                                <td style="font-size: 15px;width: auto;">男</td>
+                                <td style="font-size: 15px;width: auto;">770987</td>
+                                <td style="font-size: 15px;width: auto;">3242342</td>
+                                <td style="font-size: 15px;width: auto;">1991-10-11</td>
+                                <td style="font-size: 15px;width: auto;">12345678901</td>
+                                <td style="font-size: 15px;width: auto;">硕士</td>
+                                <td style="font-size: 15px;width: auto;">广州大学</td>
+                                <td style="font-size: 15px;width: auto;">金融</td>
+                                <td style="font-size: 15px;width: auto;">金融</td>
+                                <td style="font-size: 15px;width: auto;">90</td>
+                                <td style="font-size: 15px;width: auto;">GPA</td>
+                                <td style="font-size: 15px;width: auto;"><button class="btn btn-primary" id="change" type="button" style="height: 30px;padding-top: 2px;font-size: 14px;display:inline-block">修改</button><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);diaplay::block" title="点击修改后，弹出修改框，并且里面的信息自动带出"></i></td>
+                                <td style="font-size: 15px;width: auto;"><button class="btn btn-primary" id="zhuanan" type="button" style="height: 30px;padding-top: 2px;font-size: 14px;display:inline-block">转案申请</button><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="跳到转案申请页面，并且默认带出所属代理和学生"></i></td>
+                            </tr>
+                            <tr class="copy" style="width: 100%;">
+                                <td style="font-size: 15px;width: auto;"><input type="checkbox"></td>
+                                <td style="font-size: 15px;width: auto;">&nbsp; 2021-10-12</td>
+                                <td style="font-size: 15px;width: auto;">上海xxxx</td>
+                                <td style="font-size: 15px;width: auto;">李四</td>
+                                <td style="font-size: 15px;width: auto;">li</td>
+                                <td style="font-size: 15px;width: auto;">si</td>
+                                <td style="font-size: 15px;width: auto;">女</td>
+                                <td style="font-size: 15px;width: auto;">770987</td>
+                                <td style="font-size: 15px;width: auto;">3242342</td>
+                                <td style="font-size: 15px;width: auto;">1996-10-11</td>
+                                <td style="font-size: 15px;width: auto;">12345678901</td>
+                                <td style="font-size: 15px;width: auto;">本科</td>
+                                <td style="font-size: 15px;width: auto;">深圳大学</td>
+                                <td style="font-size: 15px;width: auto;">金融</td>
+                                <td style="font-size: 15px;width: auto;">金融</td>
+                                <td style="font-size: 15px;width: auto;">93</td>
+                                <td style="font-size: 15px;width: auto;">GPA</td>
+                                <td style="font-size: 15px;width: auto;"><button class="btn btn-primary" type="button" style="height: 30px;padding-top: 2px;font-size: 14px;">修改</button></td>
+                                <td style="font-size: 15px;width: auto;"><button class="btn btn-primary" type="button" style="height: 30px;padding-top: 2px;font-size: 14px;">转案申请</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <nav style="margin-top: 10px;width: 100%;padding-left: 80%;">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                    </ul>
+                </nav>
+                <!-- Start: modal -->
+                <div class="modal fade" role="dialog" tabindex="-1" id="myModal" style="width: 100%;height: 100%;">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">学生信息</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body" id="myModal_body" style="overflow: scroll;height: 400px;">
+                                <div style="width: auto;height: auto;">
+                                    <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">所属代理</label><select style="margin-left: 10px;"><option value=""></option><option value="12">动态获取</option><option value="13">可搜索下拉框</option></select>
+                                        <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                        <!-- End: 必填 -->
+                                        <!-- Start: notice_custom --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="当代理录入学生信息时，此字段自动带出且只读&#10;当业务顾问录入学生信息时，此字段必填"></i>
+                                        <!-- End: notice_custom -->
+                                    </div><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">申请人姓名</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+                                    <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: 必填 -->
+                                </div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">拼音（姓）</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+                                    <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: 必填 -->
+                                </div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">拼音（名）</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+                                    <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: 必填 -->
+                                </div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">性别</label><select style="margin-left: 10px;"><option value=""></option><option value="12">男</option><option value="13">女</option></select>
+                                    <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: 必填 -->
+                                </div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">身份证号</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+                                    <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: 必填 -->
+                                </div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">护照号</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+                                    <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: 必填 -->
+                                </div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">出生日期</label><input type="date" style="margin-left: 10px;">
+                                    <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: 必填 -->
+                                </div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">申请人手机</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+                                    <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: 必填 -->
+                                </div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">目前学历</label><select style="margin-left: 10px;"><option value=""></option><option value="">小学</option><option value="">中学</option><option value="">高中</option><option value="12">大专</option><option value="13">本科</option><option value="14">硕士</option><option value="">博士</option><option value="">博士后</option></select>
+                                    <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: 必填 -->
+                                </div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">毕业/就读院校</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+                                    <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: 必填 -->
+                                </div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">所读专业</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+                                    <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                                    <!-- End: 必填 -->
+                                </div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">目前专业大类</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;"></div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">平均分数值</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;"></div>
+                                <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">平均分类型</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;"></div>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-primary" type="button">保存</button><button class="btn btn-light" type="button" data-dismiss="modal">取消</button></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End: modal -->
+                <div id="pop" style="position: absolute;top: 20%;left: 40%;display: none;background: #dee2e6;border-style: none;border-color: rgb(222,226,230);width: 400px;height: auto;">
+                    <div style="margin-left: 20px;margin-top: 10px;">
+                        <h1 style="font-size: 20px;">选择文件</h1>
+                        <div style="display: inline;white-space:nowrap;"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">下载模板</label><a href="#" style="margin-left: 20px;font-size: 15px;">学生信息导入模板</a></div>
+                        <div><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">上传文件</label><input type="file" style="margin-top: 20px;margin-bottom: 20px;margin-left: 20px;width: 200px;"></div>
+                    </div>
+                    <div style="margin-top: 10px;margin-bottom: 10px;"><button class="btn btn-primary" type="button" style="display: inline-block;margin-left: 30%;font-size: 14px;margin-bottom: 10px;">导入</button><button class="btn btn-primary" id="cancel" type="button" style="display: inline-block;margin-left: 20px;font-size: 14px;padding-top: 8px;margin-bottom: 10px;">取消</button></div>
+                </div>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-2" style="width: 100%;"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/newStudent.min.js?h=3ca1b2ea12b8b6e33e4bd13420539810"></script>
+</body>
+
+</html>

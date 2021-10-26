@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>protalv2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css?h=b077f3d66f4dd45a76529f02462151f3">
+    <link rel="stylesheet" href="/assets/css/styles.min.css?h=9b8d2b00ca0ab5b6e541460124114733">
+</head>
+
+<body style="width: 100%;height: 95%;background: rgb(238,238,238);">
+    <div class="d-xl-flex align-items-xl-start" style="width: 98%;height: 95%;margin-top: 20px;margin-left: 20px;">
+        <div class="modal fade" role="dialog" tabindex="-1" id="myModal" style="width: 100%;height: 100%;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">分支机构</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body" id="myModal_body">
+                        <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">分支机构</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+                            <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                            <!-- End: 必填 -->
+                        </div>
+                        <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">所属分支机构</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+                            <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                            <!-- End: 必填 -->
+                        </div>
+                        <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">所在城市</label><input type="text" class="input" style="width: auto;margin-left: 10px;height: auto;">
+                            <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                            <!-- End: 必填 -->
+                        </div>
+                        <div class="d-xl-flex align-items-xl-start" style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">详细说明</label><textarea style="margin-left: 10px;margin-top: 10px;width: 40%;height: auto;"></textarea></div>
+                        <div style="width: auto;height: auto;"><label style="width: 100px;height: auto;margin-top: 20px;margin-left: 20px;">分支是否有效</label><select style="margin-left: 10px;"><option value="12"></option><option value="13">有效</option><option value="14">无效</option><option value="">禁用</option></select>
+                            <!-- Start: 必填 --><i class="fa fa-exclamation" style="color: rgb(242,28,15);margin-left: 1px;"></i>
+                            <!-- End: 必填 -->
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-primary" type="button">保存</button><button class="btn btn-light" type="button" data-dismiss="modal">关闭</button></div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 20%;display: inline-block;background: #ffffff;height: 100%;vertical-align: middle;">
+            <div class="table-responsive" style="width: 100%;height: 100%;">
+                <table class="table">
+                    <thead style="width: 100%;">
+                        <tr style="width: 100%;">
+                            <th style="background: #dee2e6;width: auto;">代理编码</th>
+                            <th style="background: #dee2e6;width: auto;">代理名称</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body0" style="width: 100%;height: auto;">
+                        <tr style="width: 100%;">
+                            <td style="width: auto;background: #f5fafb;">T000001</td>
+                            <td style="width: auto;background: #f5fafb;">北京xxxxx有限公司<i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="这个是【代理】列表，右侧是【代理】下的分支机构表格 &#10;1、右侧默认显示首行代理下的分支机构 &#10;2、代理表格中，选中哪行，哪行的颜色高亮显示"></i></td>
+                        </tr>
+                        <tr style="width: 100%;">
+                            <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;">C000002</td>
+                            <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;">上海xxxxx培训机构</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div style="width: 75%;height: 100%;background: #ffffff;margin-left: 10px;display: inline-block;vertical-align: middle;">
+            <h1 style="font-size: 25px;margin-top: 10px;margin-left: 10px;margin-bottom: 10px;width: auto;">分支机构</h1>
+            <div style="width: 100%;">
+                <!-- Start: button --><button class="btn btn-primary" id="new_table" type="button" style="font-size: 14px;margin-left: 10px;margin-bottom: 10px;">新建</button>
+                <!-- End: button -->
+                <!-- Start: notice --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击新建按钮，弹出新建弹框"></i>
+                <!-- End: notice -->
+                <!-- Start: button --><button class="btn btn-primary" id="search_table" type="button" style="font-size: 14px;margin-left: 20px;;float: right;margin-top: 10px;margin-right: 20px;">查询</button>
+                <!-- End: button -->
+                <div style="display: inline;white-space:nowrap;;float:right"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">状态</label><select id="status_condition" style="margin-left: 10px;"><option value="0" selected="">有效</option><option value="">无效</option><option value="1">禁用</option><option value="2">全部</option></select>
+                    <!-- Start: notice --><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="默认显示有效的列表"></i>
+                    <!-- End: notice -->
+                </div>
+                <div style="display: inline;white-space:nowrap;float:right"><label style="margin-left: 20px;margin-top: 20px;font-size: 15px;width: auto;">分支名称</label><input type="text" style="width: auto;margin-left: 10px;"></div>
+            </div>
+            <div style="width: 100%;height: auto;">
+                <!-- Start: table_format -->
+                <div class="table-responsive" style="width: 100%;height: auto;">
+                    <table class="table">
+                        <thead id="table_head" style="width: 100%;">
+                            <tr style="width: 100%;">
+                                <th style="background: #dee2e6;width: auto;">分支名称</th>
+                                <th style="background: #dee2e6;width: auto;">所属分支机构</th>
+                                <th style="background: #dee2e6;width: auto;">所在城市</th>
+                                <th style="background: #dee2e6;width: auto;">详细说明</th>
+                                <th style="background: #dee2e6;width: auto;">状态</th>
+                                <th style="background: #dee2e6;width: auto;"></th>
+                                <th style="background: #dee2e6;width: auto;"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body" style="width: 100%;height: auto;">
+                            <tr style="width: 100%;">
+                                <td style="width: auto;"><span>北京朝阳区xxxx有限公司</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;"><span>北京xxxx有限公司</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;"><span>北京</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;"><span>这是一个备注</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;border-style: none;border-color: rgb(241,67,55);"><span id="td_useful" style="border-style: none;border-color: rgb(244,60,48);">有效</span><select style="width: 100px;display:none"><option value="0" selected="">有效</option><option value="1">禁用</option></select></td>
+                                <td style="width: auto;"><button class="btn btn-primary" id="change" type="button" style="font-size: 14px;">修改</button><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击【修改】按钮后自动弹出修改框，里面的字段值自动带出本行的值"></i></td>
+                                <td style="width: auto;"><button class="btn btn-primary" id="btn_useful" type="button" style="font-size: 14px;">禁用</button><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击【禁用】 当前行的 【是否有效】字段变为【禁用】,并且该按钮变成【启用】按钮  &#10;点击【启用】 当前行的 【是否有效】字段变为【有效】,并且该按钮变成【禁用】按钮 "></i></td>
+                            </tr>
+                            <tr style="width: 100%;">
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><span>北京海淀区xxxx有限公司</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><span>北京xxxx有限公司</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><span>北京</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><span>这里该写啥</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><span>无效</span><select style="width: 100px;display:none"><option value="0" selected="">有效</option><option value="1">禁用</option></select></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><button class="btn btn-primary" type="button" style="font-size: 14px;">修改</button></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><button class="btn btn-primary" type="button" style="font-size: 14px;">禁用</button></td>
+                            </tr>
+                            <tr style="width: 100%;">
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><span>北京长清区xxxx有限公司</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><span>北京xxxx有限公司</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><span>北京</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><span>这里该写啥</span><input type="text" style="display: none;width: 100px;"></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><span>禁用</span><select style="width: 100px;display:none"><option value="0" selected="">有效</option><option value="1">禁用</option></select></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><button class="btn btn-primary" type="button" style="font-size: 14px;">修改</button></td>
+                                <td style="width: auto;border-bottom: 1px solid rgb(222,226,230) ;"><button class="btn btn-primary" type="button" style="font-size: 14px;">禁用</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- End: table_format -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/agent_subcompany.min.js?h=2ff688cb0de1dc94337d379665ea58e8"></script>
+</body>
+
+</html>
