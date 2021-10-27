@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>protalv2</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=4113ef79ec86585cadba411db5402e3b">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css?h=b077f3d66f4dd45a76529f02462151f3">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css?h=b077f3d66f4dd45a76529f02462151f3">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css?h=b077f3d66f4dd45a76529f02462151f3">
+    <link rel="stylesheet" href="assets/css/styles.min.css?h=9b8d2b00ca0ab5b6e541460124114733">
+</head>
+
+<body style="width: 100%;height: 100%;border-style: none;">
+    <div style="width: 100%;height: 100%;">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation" style="height: 10%;"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-1">主页</a></li>
+            <li class="nav-item" role="presentation" style="height: 10%;"><a class="nav-link" role="tab" data-toggle="tab" id="list" href="#tab-2">待处理注册申请</a></li>
+            <li class="nav-item" role="presentation" style="height: 10%;"><a class="nav-link active" role="tab" data-toggle="tab" id="new_agent" href="#tab-3">新代理创建</a></li>
+        </ul>
+        <div class="tab-content" style="width: 100%;height: 90%;">
+            <div class="tab-pane" role="tabpanel" id="tab-1" style="height: 100%;width: 30%;">
+                <div class="table-responsive" style="width: auto;height: auto;margin-left: 10px;margin-top: 20px;border-style: solid;border-color: rgb(222,226,230);">
+                    <table class="table">
+                        <thead style="width: auto;height: auto;">
+                            <tr style="width: auto;height: auto;">
+                                <th style="height: auto;width: auto;">事务名称</th>
+                                <th style="width: 50%;height: 40%;">个数</th>
+                            </tr>
+                        </thead>
+                        <tbody style="width: auto;height: auto;">
+                            <tr style="width: auto;height: auto;">
+                                <td style="height: 33%;width: 50%;">……</td>
+                                <td style="width: auto;height: auto;">……</td>
+                            </tr>
+                            <tr style="width: auto;height: auto;">
+                                <td style="height: auto;width: auto;">待处理注册申请</td>
+                                <td style="width: auto;height: auto;"><a id="num" href="#tab-2">2</a><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击后自动打开【待处理注册申请（TAB页）】页面"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-2" style="height: 100%;width: 100%;">
+                <div class="table-responsive" style="width: 100%;height: 100%;margin-top: 20px;border-style: solid;border-color: rgb(222,226,230);">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="background: #dee2e6;width: 10%;">联系人名称</th>
+                                <th style="background: #dee2e6;width: 10%;">邮箱</th>
+                                <th style="background: #dee2e6;width: 10%;">手机号</th>
+                                <th style="background: #dee2e6;width: 10%;">注册详情</th>
+                                <th style="background: #dee2e6;width: 20%;">是否开发为代理</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width: 10%;">张三</td>
+                                <td style="width: 10%;">123@qq.com</td>
+                                <td style="width: 10%;">1234567899</td>
+                                <td style="width: 10%;">我是XXXXX</td>
+                                <td style="width: 10%;"><a id="agree" href="#" style="display: inline-block;margin-left: 20px;">开发</a><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击开发后，出现确认弹框，如果确定，则发送邮件给代理，告知其相关信息（邮件模板未确认），并打开【新代理创建（TAB页，同菜单-新代理创建）】页面"></i>
+                                    <a
+                                        id="reject" href="#" style="display: inline-block;margin-left: 20px;">拒绝</a><i class="fas fa-comment" style="margin-left: 10px;color: rgb(248,66,54);" title="点击拒绝后，出现填写拒绝意见弹框，填写后点确定，发送邮件给代理（邮件模板未确认）"></i></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10%;">李四</td>
+                                <td style="width: 10%;">456@qq.com</td>
+                                <td style="width: 10%;">9876543211</td>
+                                <td style="width: 10%;">请同意XXXX</td>
+                                <td style="width: 10%;"><a href="#" style="display: inline-block;margin-left: 20px;">开发</a><a href="#" style="display: inline-block;margin-left: 20px;">拒绝</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane active" role="tabpanel" id="tab-3" style="width: 100%;height: 100%;"><iframe name="b" src="agent_newAgent.html?1"  height="100%" width="100%" marginwidth="0" marginheight="0" frameborder="0"></iframe></div>
+        </div>
+    </div>
+    <div id="pop" style="position: absolute;top: 30%;left: 40%;display: none;background: #dee2e6;border-style: none;border-color: rgb(222,226,230);">
+        <div class="alert alert-success" role="alert" style="background: rgb(222,226,230);border-color: rgb(222,226,230);"><span>请填写退回意见</span></div><textarea style="width: 300px;height: 100px;margin-left: 10px;margin-right: 10px;"></textarea>
+        <!-- Start: br --><br>
+        <!-- End: br --><button class="btn btn-primary" type="button" style="display: inline-block;margin-left: 20%;font-size: 14px;margin-bottom: 10px;">确定并发送邮件</button><button class="btn btn-primary" id="cancel" type="button" style="display: inline-block;margin-left: 20px;font-size: 14px;padding-top: 8px;margin-bottom: 10px;">取消</button></div>
+    <div
+        id="pop_yes" style="position: absolute;top: 30%;left: 40%;display: none;background: #dee2e6;border-style: none;border-color: rgb(222,226,230);width: 250px;">
+        <h1 style="font-size: 18px;display: block;margin-top: 10px;margin-left: 60px;">是否确定开发？</h1>
+        <!-- Start: br --><br>
+        <!-- End: br --><button class="btn btn-primary" id="yes2" type="button" style="display: inline-block;margin-left: 25px;font-size: 14px;margin-bottom: 10px;">确定并发送邮件</button><button class="btn btn-primary" id="cancel2" type="button" style="display: inline-block;margin-left: 20px;font-size: 14px;padding-top: 8px;margin-bottom: 10px;">取消</button></div>
+        <script
+            src="assets/js/jquery.min.js?h=89312d34339dcd686309fe284b3f226f"></script>
+            <script src="assets/bootstrap/js/bootstrap.min.js?h=0168f7c1e0d08faa2f4b13f4a1dc8c98"></script>
+            <script src="assets/js/_toAudit_BD2.min.js?h=646be13eb2986140502213f69dce1731"></script>
+</body>
+
+</html>
